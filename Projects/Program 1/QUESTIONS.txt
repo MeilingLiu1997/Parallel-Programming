@@ -1,0 +1,36 @@
+/**
+	@Author Meiling Liu
+**/
+# Program 1: Written Component
+
+Please edit this file to include your responses to each question below. The responses don't have to be long (2-3 sentences is fine), but make sure you answer the question completely.
+
+**1.)** *In this assignment, we rely on reporting averages of the results.
+What are some situations where reporting the average is not appropriate?
+What might be a better statistic to report?*
+
+	For example, if there are some states having big gap between the riches and the poors, the average of income will not be appropriate. Similar situations also can apply into vehicles, rent and so forth. We might report the mode of the entire datas.
+
+**2.)** *We used a fixed-size array of 100 elements to store our state data.
+This works well, as long as we don't add any more states to the USA. How
+could we avoid this problem?*
+
+	We may add a grow_array method, which is used to measure the size of array. Double the current size when an attempt is made to exceed the size of the arrays.
+
+**3.)** *Let's assume we don't have the state ID number in our dataset. In 
+other words, we only have the state code ('CA'). How would you look up
+each state's information as you read in the data?*
+
+	I might use strcmp() method to sort the state code I have. Then sorting states in an array and give them "ID" number (index num of the array). And do what we did this time.
+
+**4.)** *Every program has its strengths and weaknesses. If you were going to
+design Version 2.0 of your analysis program, what would you do differently?
+What new features might be worth supporting?*
+
+	I might add more specific differences between states, but it might cost more running time.
+
+**5.)** *Were there any unintuitive, surprising, or interesting results in
+your analysis? Why would you classify these results as such?*
+
+	In 2) and 3), my analysis might be unintuitive, because I made those analytics based on my current knowledge. There are more efficient resolutions that I haven't been aware.
+

@@ -1,0 +1,23 @@
+Author: Meiling Liu
+
+# Program 3: Written Component
+
+Please edit this file to include your responses to each question below. The responses don't have to be long (2-3 sentences is fine), but make sure you answer the question completely and explain your logic.
+
+**1.)** *Our maze solving algorithm is very simple. Suggest a way that it can be improved to find the solution faster without using more threads.*
+	
+	May find shortest path of current location, using Dijkstra’s Algorithm.
+
+**2.)** *With pthreads, we have flexibility in how many threads are active at a particular time. How would you implement this program in MPI?*
+
+	In MPI, I may copy this program to each processor, paralleling process. 
+
+**3.)** *In multithreaded programs, we have to protect shared variables with mutexes. What is an example of a situation where not doing so could lead to incorrect answers or output?*
+
+	When we add total number of threads, if we didn't lock-and-unlock mutexes, the number of threads may be changed as other threads create threads simultaneously.
+
+**4.)** *Our algorithm has one major weakness: if a path loops back to itself, then it may be revisited over and over again. (Note: this isn't a problem for our test mazes because they do not contain such loops). How would you address this issue?*
+
+	First, initial all space, except walls, are 0;
+	Then, set visited location become 1, means visited;
+	Last, set a check method, if current location is 0, then move forward; otherwise, go back until find a location taged as 1.
